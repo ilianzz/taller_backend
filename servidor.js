@@ -12,11 +12,14 @@ const server = http.createServer((req, res) => {
     res.end(`
         <html>
             <head>
-                
+                <style>
+                    body {
+                        background-color: red;
+                    }
+                </style>
             </head>
             <body>
                 <h1>BIENVENIDOS A MI PAGINA</h1>
-                
             </body>
         </html>
     `);

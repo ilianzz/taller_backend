@@ -1,25 +1,57 @@
 const http = require('http');
 
-// Creación del servidor
 console.log("Hola mundo");
 
 const server = http.createServer((req, res) => {
-    // Respuesta exitosa
     res.statusCode = 200;
-    // El contenido de la respuesta será de tipo HTML
     res.setHeader('Content-Type', 'text/html');
-    // Enviar la respuesta con estilo CSS
     res.end(`
         <html>
             <head>
                 <style>
                     body {
-                        background-color: red;
+                        background-color: lightblue;
+                        font-family: Arial, sans-serif;
+                    }
+                    h1 {
+                        text-align: center;
+                        color: white;
+                        background-color: darkblue;
+                        padding: 20px;
+                        margin: 0;
+                    }
+                    .navbar {
+                        width: 100%;
+                        background-color: #333;
+                        overflow: hidden;
+                    }
+                    .navbar a {
+                        float: left;
+                        display: block;
+                        color: white;
+                        text-align: center;
+                        padding: 14px 16px;
+                        text-decoration: none;
+                    }
+                    .navbar a:hover {
+                        background-color: #ddd;
+                        color: black;
                     }
                 </style>
             </head>
             <body>
-                <h1>BIENVENIDOS A MI PAGINA</h1>
+                <h1>ASOPROS</h1>
+                <div class="navbar">
+                    <a href="#inicio">Inicio</a>
+                    <a href="#mision">Mision</a>
+                    <a href="#vision">Vision</a>
+                    <a href="#galeria">Galeria</a>
+                    <a href="#videos">Videos Informativos</a>
+                    <a href="#productos">Productos en Venta</a>
+                    <a href="#certificaciones">Certificaciones</a>
+                    <a href="#contacto">Contacto de Venta</a>
+                    
+                </div>
             </body>
         </html>
     `);
